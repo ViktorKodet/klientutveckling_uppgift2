@@ -1,0 +1,20 @@
+footer {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+body {
+  padding-top: 100px;
+}
+
+.store-product {
+}
+
+.cart-product {
+}
