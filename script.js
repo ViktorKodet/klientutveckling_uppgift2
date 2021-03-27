@@ -1,8 +1,3 @@
-/*fetch("https://webacademy.se/fakestore/")
-  .then((res) => res.json())
-  .then((json) => console.log(json));
-  */
-
 function fetchAndRenderData() {
   fetch("https://webacademy.se/fakestore/")
     .then((response) => {
@@ -53,7 +48,7 @@ function renderData(product, prodCount) {
     var productObject = product;
     var productTitle = "" + product.title;
     output = `
-    <div class="store-product border border-primary">
+    <div class="border border-primary">
     <img id="productImage${productNumber}" src="${product.image}" alt="${product.title}" class="img-fluid rounded mx-auto d-block" />
     <h4 class="text-center" id="productTitle${productNumber}">${product.title} </h4>
     <p>${product.description} </p>
@@ -69,31 +64,6 @@ function renderData(product, prodCount) {
     prodCount++;
   });
 }
-/*
-function validateForm() {
-  var alertText = "";
-  console.log(document.myForm.email.value);
-  alertText += validateEmail(document.myForm.email.value);
-  alertText += validateName(document.myForm.name.value);
-  console.log(alertText);
-
-  
-}
-*/
-
-/*
-function validateEmail(inputText) {
-  var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  console.log(inputText);
-  if (inputText.value.match(mailformat)) {
-    alert("Valid email address!");
-    return "";
-  } else {
-    alert("You have entered an invalid email address!");
-    return "Invalid email adress";
-  }
-}
-*/
 
 function validateEmail(inputText) {
   var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -117,7 +87,7 @@ function validateName(inputText) {
 // avancerad phone validation - /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im (10 siffror)
 function validatePhone(inputText) {
   console.log("Phone number: " + inputText);
-  var re = /^[0-9]$/;
+  var re = /^[0-9]*$/;
   if (re.test(inputText)) {
     return "";
   } else {
